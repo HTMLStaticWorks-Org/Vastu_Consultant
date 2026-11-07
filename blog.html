@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastu Insights & Property Case Studies | Vastu Harmony</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="Explore illustrative property assessments, planning considerations and Vastu-based recommendations for different types of spaces.">
+
+    <!-- Google Fonts: Cormorant Garamond (Headings) + Manrope (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-glass">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-compass-fill"></i>
+                <span>Vastu <span class="text-primary-accent">Harmony</span></span>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none text-body ms-auto" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Consultation Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+                    <a href="dashboard.html"
+                        class="btn btn-secondary-custom d-flex align-items-center justify-content-center"
+                        style="width: 40px; height: 40px;" title="Client Portal"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="#" id="rtlToggle"
+                        class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold"
+                        style="height: 40px; padding: 0 14px; font-size: 0.85rem;" title="Toggle RTL">RTL</a>
+                    <a href="#" id="themeToggle"
+                        class="btn btn-secondary-custom d-flex align-items-center justify-content-center"
+                        style="width: 40px; height: 40px;" title="Toggle Theme"><i class="bi bi-moon-stars"></i></a>
+                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2"
+                        style="height: 40px; padding: 0 1.5rem;">Client Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: VASTU INSIGHTS & PROPERTY CASE STUDIES -->
+    <section class="hero-blog-magazine">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-up">
+                    <div class="eyebrow-label">ILLUSTRATIVE PROPERTY ASSESSMENTS</div>
+                    <h1 class="display-3 mb-4">
+                        Vastu Insights & <span class="text-primary-accent">Property Case Studies</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Explore illustrative property assessments, planning considerations and Vastu-based
+                        recommendations for different types of spaces.
+                    </p>
+                    <a href="#articles-section" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold">Explore Case
+                        Studies <i class="bi bi-arrow-down ms-1"></i></a>
+                </div>
+
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-3 position-relative">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+                            class="img-fluid rounded border border-secondary w-100"
+                            style="max-height: 360px; object-fit: cover;"
+                            alt="Architectural Floor Plan and Vastu Assessment">
+                        <div
+                            class="position-absolute bottom-0 start-0 m-4 p-3 bg-primary-dark rounded border border-secondary shadow hero-blog-featured-badge">
+                            <span class="badge bg-primary-accent text-white mb-2">ILLUSTRATIVE ASSESSMENT</span>
+                            <h6 class="mb-1">Directional & Spatial Planning Examples</h6>
+                            <small class="text-secondary">Residential • Apartment • Commercial • Plot</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1 (CASE STUDIES): FILTERABLE CATEGORY CHIPS -->
+    <section class="py-4 bg-secondary-dark border-top border-secondary">
+        <div class="container">
+            <div
+                class="blog-category-chips d-flex align-items-center justify-content-center gap-2 overflow-x-auto py-2">
+                <span class="text-secondary small fw-bold me-2">CATEGORIES:</span>
+                <button class="btn btn-primary-orange btn-sm rounded-pill px-3" data-filter="all">All Case
+                    Studies</button>
+                <button class="btn btn-secondary-custom btn-sm rounded-pill px-3"
+                    data-filter="residential-home">Residential Home</button>
+                <button class="btn btn-secondary-custom btn-sm rounded-pill px-3" data-filter="modern-apartment">Modern
+                    Apartment</button>
+                <button class="btn btn-secondary-custom btn-sm rounded-pill px-3"
+                    data-filter="corporate-office">Corporate Office</button>
+                <button class="btn btn-secondary-custom btn-sm rounded-pill px-3" data-filter="residential-plot">Plot
+                    Evaluation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 (CASE STUDIES): FEATURED ILLUSTRATIVE STUDY OVERVIEW -->
+    <section class="py-5" id="featured" data-category="residential-home">
+        <div class="container py-5">
+            <div class="glass-card p-4 p-md-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 fade-up">
+                        <span class="badge bg-primary-accent text-white mb-3">CASE STUDY 1 • ILLUSTRATIVE EXAMPLE</span>
+                        <h2 class="display-6 mb-3">Case Study 1 — Residential Home Planning</h2>
+                        <p class="text-secondary mb-4">An illustrative architectural study demonstrating how traditional
+                            directional and spatial considerations are evaluated for a newly planned independent house
+                            floor plan.</p>
+
+                        <div class="p-3 bg-primary-dark rounded border-start border-primary mb-4"
+                            style="border-start-width: 4px !important;">
+                            <ul class="list-unstyled mb-0 small text-secondary d-flex flex-column gap-2">
+                                <li><strong class="text-primary-accent">Property Type:</strong> Independent House</li>
+                                <li><strong class="text-primary-accent">Focus:</strong> Entrance, kitchen and bedroom
+                                    arrangements.</li>
+                                <li><strong class="text-primary-accent">Assessment:</strong> Traditional directional and
+                                    spatial considerations.</li>
+                                <li><strong class="text-primary-accent">Outcome:</strong> Documented planning
+                                    recommendations.</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="rounded-circle border border-secondary d-flex align-items-center justify-content-center text-primary-accent"
+                                    style="width: 45px; height: 45px;">
+                                    <i class="bi bi-compass-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Vastu Harmony Architectural Desk</h6>
+                                    <small class="text-secondary">Illustrative Planning Reference</small>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn btn-secondary-custom btn-sm">Enquire Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                            class="img-fluid rounded border border-secondary w-100"
+                            style="max-height: 380px; object-fit: cover;"
+                            alt="Independent House Architectural Planning">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 (CASE STUDIES): ILLUSTRATIVE ARCHITECTURAL METHODOLOGY -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" data-category="corporate-office">
+        <div class="container py-5">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">SPATIAL EVALUATION FRAMEWORK</span>
+                <h2 class="display-6 mt-1">How Property Case Studies Are Structured</h2>
+            </div>
+
+            <div class="glass-card p-4 p-md-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7 fade-up">
+                        <span class="badge bg-secondary text-primary-accent mb-3">ILLUSTRATIVE METHODOLOGY</span>
+                        <h3>Systematic Directional & Floor Plan Review</h3>
+                        <p class="text-secondary mb-4">Each illustrative case study outlines how Vastu Shastra
+                            principles examine property orientation, functional room zoning and elemental alignment
+                            across residential, commercial and land properties.</p>
+
+                        <div class="row g-2 g-sm-3 text-center align-items-stretch">
+                            <div class="col-4">
+                                <div
+                                    class="p-2 p-sm-3 bg-primary-dark rounded border border-secondary h-100 d-flex flex-column justify-content-center">
+                                    <h4 class="text-primary-accent mb-0 fs-5 fs-sm-4">Orientation</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">Compass & Axis</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div
+                                    class="p-2 p-sm-3 bg-primary-dark rounded border border-secondary h-100 d-flex flex-column justify-content-center">
+                                    <h4 class="text-primary-accent mb-0 fs-5 fs-sm-4">Zoning</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">Room Placement</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div
+                                    class="p-2 p-sm-3 bg-primary-dark rounded border border-secondary h-100 d-flex flex-column justify-content-center">
+                                    <h4 class="text-primary-accent mb-0 fs-5 fs-sm-4">Guidance</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">Planning Report</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 fade-up" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80"
+                            class="img-fluid rounded border border-secondary"
+                            alt="Vastu Compass and Directional Diagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 (CASE STUDIES): ALL 4 ILLUSTRATIVE CASE STUDIES GRID -->
+    <section class="py-5" id="articles-section">
+        <div class="container py-5">
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5 fade-up">
+                <div>
+                    <span class="eyebrow-label">ILLUSTRATIVE CASE STUDY CATEGORIES</span>
+                    <h2 class="display-6 mt-1 mb-0">Property Assessments & Vastu Planning Examples</h2>
+                </div>
+                <a href="#articles-section" class="btn btn-secondary-custom mt-3 mt-md-0 fw-semibold"
+                    id="viewAllArticlesBtn">View All Case Studies <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4 justify-content-center" id="articlesGrid">
+                <!-- Case Study 1 — Residential Home Planning -->
+                <div class="col-lg-6 col-md-6 fade-up" data-category="residential-home">
+                    <div
+                        class="glass-card h-100 overflow-hidden d-flex flex-column justify-content-between border-hover-orange">
+                        <div>
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                    class="w-100" style="height: 240px; object-fit: cover;"
+                                    alt="Case Study 1 — Residential Home Planning">
+                                <span
+                                    class="badge bg-primary-dark border border-secondary text-primary-accent position-absolute top-0 start-0 m-3">Case
+                                    Study 1</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-3">Case Study 1 — Residential Home Planning</h4>
+                                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-0">
+                                    <li><i class="bi bi-house-door text-primary-accent me-2"></i><strong>Property
+                                            Type:</strong> Independent House</li>
+                                    <li><i class="bi bi-bullseye text-primary-accent me-2"></i><strong>Focus:</strong>
+                                        Entrance, kitchen and bedroom arrangements.</li>
+                                    <li><i
+                                            class="bi bi-compass text-primary-accent me-2"></i><strong>Assessment:</strong>
+                                        Traditional directional and spatial considerations.</li>
+                                    <li><i
+                                            class="bi bi-file-earmark-check text-primary-accent me-2"></i><strong>Outcome:</strong>
+                                        Documented planning recommendations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="px-4 pb-4 pt-0 d-flex align-items-center justify-content-between text-secondary small border-top border-secondary pt-3 mt-auto">
+                            <span><i class="bi bi-journal-bookmark me-1"></i> Illustrative Example</span>
+                            <a href="services.html" class="text-primary-accent fw-bold">Residential Vastu <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 — Modern Apartment Assessment -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.1s;" data-category="modern-apartment">
+                    <div
+                        class="glass-card h-100 overflow-hidden d-flex flex-column justify-content-between border-hover-orange">
+                        <div>
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80"
+                                    class="w-100" style="height: 240px; object-fit: cover;"
+                                    alt="Case Study 2 — Modern Apartment Assessment">
+                                <span
+                                    class="badge bg-primary-dark border border-secondary text-primary-accent position-absolute top-0 start-0 m-3">Case
+                                    Study 2</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-3">Case Study 2 — Modern Apartment Assessment</h4>
+                                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-0">
+                                    <li><i class="bi bi-building text-primary-accent me-2"></i><strong>Property
+                                            Type:</strong> Residential Apartment</li>
+                                    <li><i class="bi bi-bullseye text-primary-accent me-2"></i><strong>Focus:</strong>
+                                        Room placement and layout assessment.</li>
+                                    <li><i
+                                            class="bi bi-compass text-primary-accent me-2"></i><strong>Assessment:</strong>
+                                        Floor plan review and directional observations.</li>
+                                    <li><i
+                                            class="bi bi-file-earmark-check text-primary-accent me-2"></i><strong>Outcome:</strong>
+                                        Practical recommendations for the existing layout.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="px-4 pb-4 pt-0 d-flex align-items-center justify-content-between text-secondary small border-top border-secondary pt-3 mt-auto">
+                            <span><i class="bi bi-journal-bookmark me-1"></i> Illustrative Example</span>
+                            <a href="services.html" class="text-primary-accent fw-bold">Floor Plan Analysis <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 — Corporate Office Planning -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.1s;" data-category="corporate-office">
+                    <div
+                        class="glass-card h-100 overflow-hidden d-flex flex-column justify-content-between border-hover-orange">
+                        <div>
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                                    class="w-100" style="height: 240px; object-fit: cover;"
+                                    alt="Case Study 3 — Corporate Office Planning">
+                                <span
+                                    class="badge bg-primary-dark border border-secondary text-primary-accent position-absolute top-0 start-0 m-3">Case
+                                    Study 3</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-3">Case Study 3 — Corporate Office Planning</h4>
+                                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-0">
+                                    <li><i class="bi bi-briefcase text-primary-accent me-2"></i><strong>Property
+                                            Type:</strong> Commercial Office</li>
+                                    <li><i class="bi bi-bullseye text-primary-accent me-2"></i><strong>Focus:</strong>
+                                        Reception, workstations and meeting spaces.</li>
+                                    <li><i
+                                            class="bi bi-compass text-primary-accent me-2"></i><strong>Assessment:</strong>
+                                        Traditional Vastu planning considerations.</li>
+                                    <li><i
+                                            class="bi bi-file-earmark-check text-primary-accent me-2"></i><strong>Outcome:</strong>
+                                        Suggested workspace layout improvements.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="px-4 pb-4 pt-0 d-flex align-items-center justify-content-between text-secondary small border-top border-secondary pt-3 mt-auto">
+                            <span><i class="bi bi-journal-bookmark me-1"></i> Illustrative Example</span>
+                            <a href="services.html" class="text-primary-accent fw-bold">Commercial Vastu <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 — Residential Plot Evaluation -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.2s;" data-category="residential-plot">
+                    <div
+                        class="glass-card h-100 overflow-hidden d-flex flex-column justify-content-between border-hover-orange">
+                        <div>
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80"
+                                    class="w-100" style="height: 240px; object-fit: cover;"
+                                    alt="Case Study 4 — Residential Plot Evaluation">
+                                <span
+                                    class="badge bg-primary-dark border border-secondary text-primary-accent position-absolute top-0 start-0 m-3">Case
+                                    Study 4</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-3">Case Study 4 — Residential Plot Evaluation</h4>
+                                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-0">
+                                    <li><i class="bi bi-geo-alt text-primary-accent me-2"></i><strong>Property
+                                            Type:</strong> Vacant Residential Plot</li>
+                                    <li><i class="bi bi-bullseye text-primary-accent me-2"></i><strong>Focus:</strong>
+                                        Plot orientation and site positioning.</li>
+                                    <li><i
+                                            class="bi bi-compass text-primary-accent me-2"></i><strong>Assessment:</strong>
+                                        Shape, direction and road positioning.</li>
+                                    <li><i
+                                            class="bi bi-file-earmark-check text-primary-accent me-2"></i><strong>Outcome:</strong>
+                                        Planning considerations before construction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="px-4 pb-4 pt-0 d-flex align-items-center justify-content-between text-secondary small border-top border-secondary pt-3 mt-auto">
+                            <span><i class="bi bi-journal-bookmark me-1"></i> Illustrative Example</span>
+                            <a href="services.html" class="text-primary-accent fw-bold">Plot & Land Vastu <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 (CASE STUDIES): CONSULTATION CALL TO ACTION -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-5">
+            <div class="glass-card p-4 p-md-5 text-center fade-up mx-auto" style="max-width: 840px;">
+                <div class="badge bg-primary-dark p-3 rounded-circle text-primary-accent border border-secondary fs-2 mb-3 d-inline-flex align-items-center justify-content-center"
+                    style="width: 64px; height: 64px;">
+                    <i class="bi bi-compass-fill"></i>
+                </div>
+                <h2 class="display-6 mb-3">Request a Personalized Property Assessment</h2>
+                <p class="text-secondary mb-4 mx-auto" style="max-width: 620px;">Whether you are planning an independent
+                    house, reviewing a residential apartment, organizing a corporate office or evaluating a plot of
+                    land, schedule a consultation with Vastu Harmony.</p>
+
+                <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+                    <a href="contact.html" class="btn btn-primary-orange py-3 px-4 fw-bold">Book a Consultation</a>
+                    <a href="services.html" class="btn btn-secondary-custom py-3 px-4 fw-bold">Explore Our Services</a>
+                </div>
+
+                <div
+                    class="d-flex align-items-center justify-content-center gap-2 gap-sm-4 text-secondary small flex-nowrap overflow-x-auto py-1">
+                    <span class="text-nowrap" style="font-size: 0.78rem;"><i
+                            class="bi bi-check-circle-fill text-primary-accent me-1"></i> Traditional Vastu
+                        Principles</span>
+                    <span class="text-nowrap" style="font-size: 0.78rem;"><i
+                            class="bi bi-check-circle-fill text-primary-accent me-1"></i> Floor Plan & Directional
+                        Review</span>
+                    <span class="text-nowrap" style="font-size: 0.78rem;"><i
+                            class="bi bi-check-circle-fill text-primary-accent me-1"></i> Documented Consultation
+                        Report</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary-dark border-top border-secondary">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
+                        <i class="bi bi-compass-fill"></i>
+                        <span>Vastu <span class="text-primary-accent">Harmony</span></span>
+                    </a>
+                    <p class="text-secondary mb-4">Creating balanced spaces through the timeless principles of Vastu
+                        Shastra. Personalized Vastu guidance for residential homes, commercial offices, plots of land
+                        and architectural floor plans.</p>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex align-items-center gap-2 mt-3">
+                        <a href="https://instagram.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://twitter.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://facebook.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5 class="mb-4">Vastu Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="footer-link">Residential Vastu</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Office & Commercial</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Plot & Land Vastu</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Floor Plan Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5 class="mb-4">Client Portal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html" class="footer-link">Case Studies</a></li>
+                        <li class="mb-2"><a href="login.html" class="footer-link">Client Login</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-link">Book Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="mb-4">Vastu Insights</h5>
+                    <form class="d-flex gap-2 mb-3" style="max-width: 440px;">
+                        <input type="email" class="form-control form-control-glass" placeholder="Enter your email">
+                        <button class="btn btn-primary-orange text-nowrap flex-shrink-0"
+                            type="button">Subscribe</button>
+                    </form>
+                    <small class="text-secondary">Receive traditional Vastu Shastra insights and architectural planning
+                        notes.</small>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center">
+                <p class="text-secondary small mb-0">&copy; 2026 Vastu Harmony — Professional Vastu Consultation. All
+                    rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

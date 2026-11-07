@@ -1,0 +1,37 @@
+/* Dark Mode Specific Overrides — Vastu Harmony Palette */
+[data-theme="dark"] {
+    --primary-bg: #1C2520;
+    --secondary-bg: #232E28;
+    --card-bg: #232E28;
+    --text-primary: #FAF7F0;
+    --text-secondary: #D8C3A5;
+    --border-color: rgba(216, 195, 165, 0.28);
+    --primary-accent: #C49A45;
+    --primary-accent-hover: #B86B4B;
+    --glow-color: rgba(196, 154, 69, 0.25);
+}
+
+[data-theme="dark"] .text-secondary {
+    color: #D8C3A5 !important;
+    opacity: 1 !important;
+}
+
+[data-theme="dark"] .glass-card,
+[data-theme="dark"] .product-card {
+    background-color: #232E28;
+    border-color: rgba(216, 195, 165, 0.28);
+}
+
+[data-theme="dark"] .btn-gradient,
+[data-theme="dark"] .btn-primary-orange {
+    background-color: #285943;
+    border-color: #C49A45;
+    color: #FAF7F0 !important;
+}
+
+[data-theme="dark"] .btn-gradient:hover,
+[data-theme="dark"] .btn-primary-orange:hover {
+    background-color: #C49A45;
+    border-color: #C49A45;
+    color: #29352F !important;
+}

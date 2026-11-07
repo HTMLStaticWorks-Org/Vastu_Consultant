@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastu Consultation Services | Vastu Harmony</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="Personalized Vastu guidance for residential, commercial and land properties, based on traditional architectural principles.">
+
+    <!-- Google Fonts: Cormorant Garamond (Headings) + Manrope (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-glass">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-compass-fill"></i>
+                <span>Vastu <span class="text-primary-accent">Harmony</span></span>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none text-body ms-auto" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Consultation Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+                    <a href="dashboard.html"
+                        class="btn btn-secondary-custom d-flex align-items-center justify-content-center"
+                        style="width: 40px; height: 40px;" title="Client Portal"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="#" id="rtlToggle"
+                        class="btn btn-secondary-custom d-flex align-items-center justify-content-center fw-bold"
+                        style="height: 40px; padding: 0 14px; font-size: 0.85rem;" title="Toggle RTL">RTL</a>
+                    <a href="#" id="themeToggle"
+                        class="btn btn-secondary-custom d-flex align-items-center justify-content-center"
+                        style="width: 40px; height: 40px;" title="Toggle Theme"><i class="bi bi-moon-stars"></i></a>
+                    <a href="login.html" class="btn btn-primary-orange fw-semibold ms-2"
+                        style="height: 40px; padding: 0 1.5rem;">Client Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: VASTU CONSULTATION SERVICES -->
+    <section class="hero-service-orbit">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-up">
+                    <div class="eyebrow-label">ARCHITECTURAL & SPATIAL GUIDANCE</div>
+                    <h1 class="display-3 mb-4">
+                        Vastu Consultation <span class="text-primary-accent">Services</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Personalized Vastu guidance for residential, commercial and land properties, based on
+                        traditional architectural principles.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#specialized-services" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold">Explore
+                            All Services <i class="bi bi-arrow-down ms-1"></i></a>
+                        <a href="contact.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold">Book a
+                            Consultation</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-3 position-relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                            class="img-fluid rounded border border-secondary w-100"
+                            style="max-height: 360px; object-fit: cover;"
+                            alt="Vastu Consultation and Architectural Guidance">
+                        <div
+                            class="position-absolute bottom-0 start-0 m-4 p-3 bg-primary-dark rounded border border-secondary shadow d-flex align-items-center gap-3 hero-journey-badge">
+                            <i class="bi bi-compass-fill text-primary-accent fs-3"></i>
+                            <div>
+                                <h6 class="mb-0">Traditional Vastu Shastra Principles</h6>
+                                <small class="text-secondary">Residential • Commercial • Plot • Floor Plans</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: SERVICE 1 — RESIDENTIAL VASTU SPOTLIGHT -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="residential-vastu">
+        <div class="container py-4">
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6 fade-up">
+                    <span class="eyebrow-label">SERVICE 1 • HOME & LIVING SPACES</span>
+                    <h2 class="display-6 mt-1 mb-3">Residential Vastu</h2>
+                    <p class="lead text-secondary mb-4">
+                        Get professional guidance for apartments, independent houses, villas and newly planned homes.
+                        Review room arrangements, entrances, kitchen placement, bedrooms and other important areas.
+                    </p>
+                    <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4">
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Home Floor Plan Review</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Main Entrance Assessment</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Bedroom & Kitchen Layout Review</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Room Direction Analysis</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-primary-accent"></i>
+                            <span><strong>Personalized Recommendations</strong></span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary-orange py-2 px-4 fw-semibold">Book Home Consultation
+                        <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+                <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div
+                                    class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2">
+                                    <i class="bi bi-door-open"></i></div>
+                                <h6 class="fw-bold">Main Entrance Assessment</h6>
+                                <p class="text-secondary small mb-0">Detailed evaluation of primary doorway orientation
+                                    and threshold placement according to directional grids.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div
+                                    class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2">
+                                    <i class="bi bi-house-heart"></i></div>
+                                <h6 class="fw-bold">Bedroom & Kitchen Layout</h6>
+                                <p class="text-secondary small mb-0">Thoughtful review of cooking zones, master bedrooms
+                                    and family living spaces for elemental balance.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div
+                                    class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2">
+                                    <i class="bi bi-compass"></i></div>
+                                <h6 class="fw-bold">Room Direction Analysis</h6>
+                                <p class="text-secondary small mb-0">Comprehensive mapping of cardinal and intercardinal
+                                    directions across the entire residential floor plan.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 h-100">
+                                <div
+                                    class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 mb-2">
+                                    <i class="bi bi-file-earmark-text"></i></div>
+                                <h6 class="fw-bold">Personalized Recommendations</h6>
+                                <p class="text-secondary small mb-0">Practical, non-structural and architectural
+                                    suggestions documented clearly for your property.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL 4 CORE VASTU CONSULTATION SERVICES -->
+    <section class="py-5" id="specialized-services">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">COMPREHENSIVE VASTU GUIDANCE</span>
+                <h2 class="display-6 mt-1">Our Four Core Vastu Consultation Services</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Personalized Vastu guidance for residential,
+                    commercial and land properties, based on traditional architectural principles.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 — Residential Vastu -->
+                <div class="col-lg-6 col-md-6 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div
+                                class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4">
+                                <i class="bi bi-house-heart-fill"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 01</span>
+                        </div>
+                        <h4 class="mb-2">Service 1 — Residential Vastu</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Get professional guidance for apartments, independent houses, villas and newly planned
+                            homes. Review room arrangements, entrances, kitchen placement, bedrooms and other important
+                            areas.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Home Floor Plan Review</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Main Entrance Assessment</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Bedroom & Kitchen Layout
+                                    Review</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Room Direction Analysis</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Personalized Recommendations
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span
+                                    class="badge bg-primary-dark text-primary-accent border border-secondary">Apartments
+                                    • Houses • Villas</span>
+                                <a href="contact.html" class="btn btn-primary-orange btn-sm fw-semibold">Book Home
+                                    Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 — Office & Commercial Vastu -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div
+                                class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4">
+                                <i class="bi bi-building-fill-check"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 02</span>
+                        </div>
+                        <h4 class="mb-2">Service 2 — Office & Commercial Vastu</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Explore traditional Vastu considerations for business spaces, offices, retail stores and
+                            commercial buildings.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Office Layout Assessment</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Reception & Entrance Review
+                                </li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Workspace Planning</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Meeting Room Placement</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Commercial Floor Plan Review
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary">Offices
+                                    • Retail • Commercial</span>
+                                <a href="contact.html" class="btn btn-primary-orange btn-sm fw-semibold">Book Office
+                                    Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 — Plot & Land Vastu -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div
+                                class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4">
+                                <i class="bi bi-compass-fill"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 03</span>
+                        </div>
+                        <h4 class="mb-2">Service 3 — Plot & Land Vastu</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Understand traditional Vastu considerations before purchasing or developing a plot of land.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Plot Direction Assessment</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Shape & Layout Review</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Road Position Analysis</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Entrance Planning</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Site Orientation Guidance</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span
+                                    class="badge bg-primary-dark text-primary-accent border border-secondary">Pre-Purchase
+                                    • Site Planning</span>
+                                <a href="contact.html" class="btn btn-primary-orange btn-sm fw-semibold">Book Plot
+                                    Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 — Floor Plan Analysis -->
+                <div class="col-lg-6 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div
+                                class="badge bg-primary-dark p-3 rounded text-primary-accent border border-secondary fs-4">
+                                <i class="bi bi-rulers"></i></div>
+                            <span class="badge bg-secondary text-primary-accent">SERVICE 04</span>
+                        </div>
+                        <h4 class="mb-2">Service 4 — Floor Plan Analysis</h4>
+                        <p class="text-secondary small mb-3 flex-grow-1">
+                            Receive a detailed review of your architectural floor plan with recommendations based on
+                            traditional Vastu principles.
+                        </p>
+                        <div class="border-top border-secondary pt-3">
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-1 mb-3">
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Floor Plan Upload</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Directional Assessment</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Room Placement Review</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Detailed Observations</li>
+                                <li><i class="bi bi-check2 text-primary-accent me-1"></i> Consultation Report</li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span
+                                    class="badge bg-primary-dark text-primary-accent border border-secondary">Architectural
+                                    Blueprints</span>
+                                <a href="dashboard.html" class="btn btn-primary-orange btn-sm fw-semibold">Upload Your
+                                    Floor Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CONSULTATION SCOPE & DELIVERABLES MATRIX -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary" id="service-pricing">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">CONSULTATION FORMATS</span>
+                <h2 class="display-6 mt-1">Structured Vastu Assessment Options</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Select the consultation format suited to
+                    your residential property, commercial workspace or vacant plot evaluation.</p>
+            </div>
+
+            <!-- Consultation Tier Cards -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 fade-up">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center">
+                        <span class="badge bg-secondary text-primary-accent mb-3 align-self-center">FORMAT 1 • FLOOR
+                            PLAN</span>
+                        <h4 class="mb-1">Floor Plan Analysis</h4>
+                        <small class="text-secondary mb-3">Architectural drawing & directional review</small>
+                        <div class="my-3 py-3 border-top border-bottom border-secondary">
+                            <h2 class="display-6 text-primary-accent fw-bold mb-0">Blueprint Review</h2>
+                            <small class="text-secondary d-block">16-Zone Directional Mapping</small>
+                        </div>
+                        <ul
+                            class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4 text-start flex-grow-1">
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Floor Plan Upload (PDF,
+                                JPG, PNG)</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Directional Assessment
+                            </li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Room Placement Review
+                            </li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Detailed Observations &
+                                Report</li>
+                        </ul>
+                        <a href="dashboard.html" class="btn btn-secondary-custom w-100 py-2 fw-semibold">Upload Your
+                            Floor Plan</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center border-primary position-relative"
+                        style="overflow: visible;">
+                        <span
+                            class="position-absolute top-0 start-50 translate-middle badge bg-primary-accent text-white px-3 py-1 fw-bold rounded-pill shadow-sm"
+                            style="z-index: 2;">MOST REQUESTED</span>
+                        <span class="badge bg-secondary text-primary-accent mb-3 align-self-center">FORMAT 2 •
+                            RESIDENTIAL</span>
+                        <h4 class="mb-1">Residential Vastu Consultation</h4>
+                        <small class="text-secondary mb-3">Apartments, independent houses & villas</small>
+                        <div class="my-3 py-3 border-top border-bottom border-secondary">
+                            <h2 class="display-6 text-primary-accent fw-bold mb-0">Complete Home</h2>
+                            <small class="text-secondary d-block">Entrance, Kitchen & Bedroom Layout</small>
+                        </div>
+                        <ul
+                            class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4 text-start flex-grow-1">
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Home Floor Plan Review
+                            </li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Main Entrance
+                                Assessment</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Bedroom & Kitchen
+                                Layout Review</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Room Direction Analysis
+                                & Recommendations</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary-orange w-100 py-2 fw-semibold">Book Home
+                            Consultation</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 d-flex flex-column text-center">
+                        <span class="badge bg-secondary text-primary-accent mb-3 align-self-center">FORMAT 3 •
+                            COMMERCIAL & PLOT</span>
+                        <h4 class="mb-1">Commercial & Plot Vastu</h4>
+                        <small class="text-secondary mb-3">Offices, retail spaces & land evaluation</small>
+                        <div class="my-3 py-3 border-top border-bottom border-secondary">
+                            <h2 class="display-6 text-primary-accent fw-bold mb-0">Site & Workspace</h2>
+                            <small class="text-secondary d-block">Orientation, Reception & Layout</small>
+                        </div>
+                        <ul
+                            class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4 text-start flex-grow-1">
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Office Layout &
+                                Reception Review</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Workspace & Meeting
+                                Room Placement</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Plot Direction & Road
+                                Position Analysis</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-accent me-2"></i> Site Orientation &
+                                Entrance Planning</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary-custom w-100 py-2 fw-semibold">Book Office
+                            Consultation</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Summary Table -->
+            <div class="table-responsive fade-up">
+                <table
+                    class="table table-dark table-hover border border-secondary rounded align-middle overflow-hidden">
+                    <thead>
+                        <tr class="bg-primary-dark text-primary-accent">
+                            <th class="py-3 px-4">Consultation Service</th>
+                            <th class="py-3 px-4">Key Focus Areas</th>
+                            <th class="py-3 px-4">Property Types</th>
+                            <th class="py-3 px-4">Deliverable</th>
+                            <th class="py-3 px-4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="small">
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i
+                                    class="bi bi-house-heart-fill text-accent-gold me-2"></i> Residential Vastu</td>
+                            <td class="py-3 px-4">Floor plan review, main entrance, bedrooms, kitchen & directions</td>
+                            <td class="py-3 px-4">Apartments, Independent Houses, Villas</td>
+                            <td class="py-3 px-4 text-accent-gold fw-bold">Personalized Recommendations</td>
+                            <td class="py-3 px-4"><a href="contact.html" class="btn btn-primary-orange btn-sm">Book Home
+                                    Consultation</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i
+                                    class="bi bi-building-fill-check text-accent-gold me-2"></i> Office & Commercial
+                                Vastu</td>
+                            <td class="py-3 px-4">Office layout, reception, workspaces, meeting rooms & entrances</td>
+                            <td class="py-3 px-4">Offices, Retail Stores, Commercial Buildings</td>
+                            <td class="py-3 px-4 text-accent-gold fw-bold">Commercial Layout Report</td>
+                            <td class="py-3 px-4"><a href="contact.html" class="btn btn-primary-orange btn-sm">Book
+                                    Office Consultation</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i
+                                    class="bi bi-compass-fill text-accent-gold me-2"></i> Plot & Land Vastu</td>
+                            <td class="py-3 px-4">Plot direction, shape & layout, road position & entrance planning</td>
+                            <td class="py-3 px-4">Vacant Residential & Commercial Plots</td>
+                            <td class="py-3 px-4 text-accent-gold fw-bold">Site Orientation Guidance</td>
+                            <td class="py-3 px-4"><a href="contact.html" class="btn btn-primary-orange btn-sm">Book Plot
+                                    Consultation</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-white fw-bold"><i class="bi bi-rulers text-accent-gold me-2"></i>
+                                Floor Plan Analysis</td>
+                            <td class="py-3 px-4">Directional assessment, room placement review & detailed observations
+                            </td>
+                            <td class="py-3 px-4">New Plans & Existing Property Drawings</td>
+                            <td class="py-3 px-4 text-accent-gold fw-bold">Consultation Report</td>
+                            <td class="py-3 px-4"><a href="dashboard.html" class="btn btn-primary-orange btn-sm">Upload
+                                    Your Floor Plan</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section class="py-5" id="faq">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="eyebrow-label">VASTU CONSULTATION FAQ</span>
+                <h2 class="display-6 mt-1">Frequently Asked Questions</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">Answers to common questions about our Vastu
+                    consultation process, floor plan reviews and property assessments.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 fade-up">
+                    <div class="accordion accordion-glass" id="servicesFaqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseOne" aria-expanded="true"
+                                    aria-controls="faqCollapseOne">
+                                    <i class="bi bi-compass text-primary-accent me-2"></i> What documents are needed for
+                                    a Floor Plan Analysis?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="faqHeadingOne" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    You can upload an architectural floor plan (PDF, JPG or PNG) showing room
+                                    boundaries, main entrance placement and the north direction orientation. Our
+                                    consultants review room arrangements and directions to prepare a structured
+                                    consultation report.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseTwo" aria-expanded="false"
+                                    aria-controls="faqCollapseTwo">
+                                    <i class="bi bi-house-door text-primary-accent me-2"></i> Can Vastu consultation be
+                                    applied to an already constructed apartment?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+                                data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Yes. For existing apartments and independent houses, our Residential Vastu
+                                    assessment focuses on practical layout arrangements, room usage, furniture
+                                    orientation and functional placements without requiring structural demolition.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseThree" aria-expanded="false"
+                                    aria-controls="faqCollapseThree">
+                                    <i class="bi bi-building text-primary-accent me-2"></i> What is covered in an Office
+                                    & Commercial Vastu consultation?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingThree" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    Our Office & Commercial Vastu service includes an office layout assessment,
+                                    reception and entrance review, workspace planning, meeting room placement and a
+                                    comprehensive commercial floor plan review.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseFour" aria-expanded="false"
+                                    aria-controls="faqCollapseFour">
+                                    <i class="bi bi-geo-alt text-primary-accent me-2"></i> When should I schedule a Plot
+                                    & Land Vastu assessment?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingFour" data-bs-parent="#servicesFaqAccordion">
+                                <div class="accordion-body">
+                                    A Plot & Land Vastu assessment is ideal before purchasing a vacant plot or prior to
+                                    finalizing architectural drawings. We evaluate plot direction, shape and layout,
+                                    surrounding road positions, entrance planning and site orientation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECT CONSULTATION BOOKING PROMPT -->
+    <section class="py-5 bg-secondary-dark border-top border-secondary">
+        <div class="container py-4">
+            <div class="glass-card p-4 p-md-5 text-center fade-up">
+                <span class="eyebrow-label">SCHEDULE YOUR ASSESSMENT</span>
+                <h3 class="mb-3">Let's Create a More Balanced Space</h3>
+                <p class="text-secondary mx-auto mb-4" style="max-width: 620px;">Whether you're planning a new home,
+                    improving an existing property or designing a workspace, our Vastu consultation services can help
+                    you make informed decisions.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="contact.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold"><i
+                            class="bi bi-calendar-check me-1"></i> Schedule Your Consultation</a>
+                    <a href="dashboard.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold">Upload Your Floor
+                        Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary-dark border-top border-secondary">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
+                        <i class="bi bi-compass-fill"></i>
+                        <span>Vastu <span class="text-primary-accent">Harmony</span></span>
+                    </a>
+                    <p class="text-secondary mb-4">Creating balanced spaces through the timeless principles of Vastu
+                        Shastra. Personalized Vastu guidance for residential homes, commercial offices, plots of land
+                        and architectural floor plans.</p>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex align-items-center gap-2 mt-3">
+                        <a href="https://instagram.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://twitter.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://facebook.com" target="_blank"
+                            class="btn btn-secondary-custom rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 38px; height: 38px;" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5 class="mb-4">Vastu Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="footer-link">Residential Vastu</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Office & Commercial</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Plot & Land Vastu</a></li>
+                        <li class="mb-2"><a href="services.html" class="footer-link">Floor Plan Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5 class="mb-4">Client Portal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html" class="footer-link">Case Studies</a></li>
+                        <li class="mb-2"><a href="login.html" class="footer-link">Client Login</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-link">Book Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="mb-4">Vastu Insights</h5>
+                    <form class="d-flex gap-2 mb-3" style="max-width: 440px;">
+                        <input type="email" class="form-control form-control-glass" placeholder="Enter your email">
+                        <button class="btn btn-primary-orange text-nowrap flex-shrink-0"
+                            type="button">Subscribe</button>
+                    </form>
+                    <small class="text-secondary">Receive traditional Vastu Shastra insights and architectural planning
+                        notes.</small>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center">
+                <p class="text-secondary small mb-0">&copy; 2026 Vastu Harmony — Professional Vastu Consultation. All
+                    rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastu Client Portal | Vastu Harmony</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="Manage your consultations, property floor plans, assessment reports and payments in one place.">
+
+    <!-- Google Fonts: Cormorant Garamond (Headings) + Manrope (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body data-theme="light" class="bg-primary-dark">
+
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar-glass p-3 d-flex flex-column justify-content-between" id="sidebar"
+            style="width: 280px; height: 100vh; position: sticky; top: 0; border-right: 1px solid var(--border-color); background: var(--secondary-bg); overflow-y: auto;">
+            <div>
+                <!-- Brand -->
+                <div class="d-flex justify-content-between align-items-center mb-4 px-2">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                        <i class="bi bi-compass-fill text-primary-accent fs-3"></i>
+                        <span class="fs-4 fw-bold">Vastu <span class="text-primary-accent">Harmony</span></span>
+                    </a>
+                    <button class="btn text-secondary d-xl-none" id="sidebarClose"
+                        style="padding: 0; font-size: 1.5rem;" title="Close Navigation Menu"><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+
+                <!-- Sidebar Navigation Links -->
+                <ul class="nav nav-pills flex-column gap-1" id="dashboardTabs" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active w-100 text-start d-flex align-items-center gap-3"
+                            id="tab-overview" data-bs-toggle="pill" data-bs-target="#overview" type="button">
+                            <i class="bi bi-grid-1x2-fill"></i> Overview
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-book"
+                            data-bs-toggle="pill" data-bs-target="#book-consultation" type="button">
+                            <i class="bi bi-calendar-plus-fill"></i> Book Consultation
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-bookings"
+                            data-bs-toggle="pill" data-bs-target="#my-bookings" type="button">
+                            <i class="bi bi-calendar-check-fill"></i> My Bookings
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-upload"
+                            data-bs-toggle="pill" data-bs-target="#upload-floor-plan" type="button">
+                            <i class="bi bi-cloud-arrow-up-fill"></i> Upload Floor Plan
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-reports"
+                            data-bs-toggle="pill" data-bs-target="#my-reports" type="button">
+                            <i class="bi bi-file-earmark-text-fill"></i> My Reports
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-payments"
+                            data-bs-toggle="pill" data-bs-target="#payments" type="button">
+                            <i class="bi bi-credit-card-fill"></i> Payments
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-profile"
+                            data-bs-toggle="pill" data-bs-target="#my-profile" type="button">
+                            <i class="bi bi-person-fill"></i> My Profile
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link w-100 text-start d-flex align-items-center gap-3" id="tab-settings"
+                            data-bs-toggle="pill" data-bs-target="#settings" type="button">
+                            <i class="bi bi-gear-fill"></i> Settings
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Bottom Client Profile Card & Logout -->
+            <div class="border-top border-secondary pt-3 mt-3">
+                <div class="mb-3">
+                    <a href="index.html"
+                        class="btn btn-outline-danger w-100 py-2 d-flex align-items-center justify-content-center gap-2"
+                        title="Logout">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+                <div class="d-flex align-items-center gap-2 px-2">
+                    <img src="https://ui-avatars.com/api/?name=Aarav+Sharma&background=285943&color=FAF7F0"
+                        class="rounded-circle" width="36" alt="Client Avatar">
+                    <div class="lh-1">
+                        <small class="d-block fw-bold" id="sidebarClientName">Aarav Sharma</small>
+                        <small class="text-primary-accent" style="font-size: 0.75rem;"><i
+                                class="bi bi-patch-check-fill me-1"></i>Client Account</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="flex-grow-1 p-3 p-md-4 overflow-auto" style="height: 100vh; min-width: 0; width: 100%;">
+
+            <!-- Top Bar -->
+            <header
+                class="d-flex flex-wrap flex-md-nowrap justify-content-between align-items-center gap-2 gap-md-3 mb-4 pb-3 border-bottom border-secondary dashboard-header">
+                <button class="btn btn-secondary-custom d-xl-none order-1" id="sidebarToggle"
+                    style="width: 38px; height: 38px; padding: 0; flex-shrink: 0;" title="Toggle Navigation"><i
+                        class="bi bi-list fs-4"></i></button>
+                <div class="dashboard-header-title order-3 order-md-2 flex-grow-1">
+                    <h3 class="fw-bold mb-1">Welcome to Your Vastu Client Portal</h3>
+                    <p class="text-secondary small mb-0">Manage your consultations, property floor plans, assessment
+                        reports and payments in one place.</p>
+                </div>
+                <div class="d-flex align-items-center gap-2 order-2 order-md-3 flex-shrink-0 ms-auto">
+                    <button id="rtlToggle" class="btn btn-secondary-custom btn-sm fw-bold px-3" style="height: 38px;"
+                        title="Toggle RTL">RTL</button>
+                    <button id="themeToggle" class="btn btn-secondary-custom btn-sm"
+                        style="width: 38px; height: 38px; padding: 0;" title="Toggle Theme"><i
+                            class="bi bi-moon-stars"></i></button>
+                </div>
+            </header>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="dashboardTabContent">
+
+                <!-- 1. Overview Panel -->
+                <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                    <!-- Summary Cards Row -->
+                    <div class="row g-3 mb-4 align-items-stretch">
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 h-100 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 flex-shrink-0 d-flex align-items-center justify-content-center"
+                                    style="width: 48px; height: 48px;"><i class="bi bi-compass"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Total Consultations</small>
+                                    <h4 class="fw-bold mb-0 text-primary-accent" id="statTotalConsultations">2</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">All property types</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 h-100 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-2 rounded text-accent-gold border border-secondary fs-4 flex-shrink-0 d-flex align-items-center justify-content-center"
+                                    style="width: 48px; height: 48px;"><i class="bi bi-calendar-event"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Upcoming Bookings</small>
+                                    <h4 class="fw-bold mb-0" id="statUpcomingBookings">1</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">Scheduled sessions</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 h-100 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-2 rounded text-terracotta border border-secondary fs-4 flex-shrink-0 d-flex align-items-center justify-content-center"
+                                    style="width: 48px; height: 48px;"><i class="bi bi-hourglass-split"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Pending Reports</small>
+                                    <h4 class="fw-bold mb-0" id="statPendingReports">1</h4>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">Under assessment</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="glass-card p-3 h-100 d-flex align-items-center gap-3">
+                                <div class="badge bg-primary-dark p-2 rounded text-primary-accent border border-secondary fs-4 flex-shrink-0 d-flex align-items-center justify-content-center"
+                                    style="width: 48px; height: 48px;"><i class="bi bi-file-earmark-check"></i></div>
+                                <div>
+                                    <small class="text-secondary d-block">Completed Reports</small>
+                                    <h4 class="fw-bold mb-0" id="statCompletedReports">1</h4>
+                                    <small class="text-primary-accent" style="font-size: 0.75rem;">Available in My
+                                        Reports</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-5">
+                            <div class="glass-card p-4 h-100">
+                                <h5 class="fw-bold mb-3"><i
+                                        class="bi bi-pie-chart text-primary-accent me-2"></i>Consultations by Service
+                                    Type</h5>
+                                <div style="height: 260px; position: relative;">
+                                    <canvas id="vulnChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="glass-card p-4 h-100">
+                                <h5 class="fw-bold mb-3"><i
+                                        class="bi bi-bar-chart-line text-primary-accent me-2"></i>Consultation &
+                                    Assessment Activity</h5>
+                                <div style="height: 260px; position: relative;">
+                                    <canvas id="gasChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Book Consultation Panel -->
+                <div class="tab-pane fade" id="book-consultation" role="tabpanel">
+                    <div class="glass-card p-4 mx-auto" style="max-width: 800px;">
+                        <h4 class="fw-bold mb-2"><i class="bi bi-calendar-plus text-primary-accent me-2"></i>Book
+                            Consultation</h4>
+                        <p class="text-secondary small mb-4">Submit a Vastu consultation request with your property
+                            details and preferred schedule.</p>
+
+                        <div id="bookingFormFeedback" class="alert d-none mb-3"
+                            style="background: var(--secondary-bg); border: 1px solid var(--border-color); color: var(--text-primary);">
+                        </div>
+
+                        <form id="bookConsultationForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Consultation Type</label>
+                                    <select class="form-select form-control-glass" id="bcType" required>
+                                        <option value="Residential Vastu">Residential Vastu</option>
+                                        <option value="Office Vastu">Office Vastu</option>
+                                        <option value="Plot Vastu">Plot Vastu</option>
+                                        <option value="Floor Plan Analysis">Floor Plan Analysis</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Property Type</label>
+                                    <select class="form-select form-control-glass" id="bcPropertyType" required>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Independent House">Independent House</option>
+                                        <option value="Villa">Villa</option>
+                                        <option value="Office">Office</option>
+                                        <option value="Commercial Property">Commercial Property</option>
+                                        <option value="Vacant Plot">Vacant Plot</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Preferred Date</label>
+                                    <input type="date" class="form-control form-control-glass" id="bcDate" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Preferred Time</label>
+                                    <input type="time" class="form-control form-control-glass" id="bcTime" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-bold">Property Location</label>
+                                    <input type="text" class="form-control form-control-glass" id="bcLocation"
+                                        placeholder="City, Locality or Site Address" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-bold">Consultation Details</label>
+                                    <textarea class="form-control form-control-glass" id="bcDetails" rows="4"
+                                        placeholder="Describe your property orientation, room layout questions or planning requirements..."
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-orange w-100 py-3 fw-bold"><i
+                                            class="bi bi-calendar-check me-2"></i>Submit Consultation Request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 3. My Bookings Panel -->
+                <div class="tab-pane fade" id="my-bookings" role="tabpanel">
+                    <div class="glass-card p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <h4 class="fw-bold mb-0"><i class="bi bi-calendar-check text-primary-accent me-2"></i>My
+                                Bookings</h4>
+                            <button class="btn btn-primary-orange btn-sm"
+                                onclick="document.getElementById('tab-book').click();"><i
+                                    class="bi bi-plus-lg me-1"></i>Book Consultation</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-theme table-hover bg-transparent align-middle mb-0">
+                                <thead>
+                                    <tr class="text-secondary border-secondary">
+                                        <th>Booking ID</th>
+                                        <th>Consultation Type</th>
+                                        <th>Scheduled Date</th>
+                                        <th>Booking Status</th>
+                                        <th>View Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bookingsTableBody">
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#VH-1024</td>
+                                        <td>Residential Vastu</td>
+                                        <td>2026-11-14 • 11:00 AM</td>
+                                        <td><span class="badge bg-secondary text-primary-accent">Scheduled</span></td>
+                                        <td><button class="btn btn-secondary-custom btn-sm"
+                                                onclick="showBookingDetails('#VH-1024', 'Residential Vastu', '2026-11-14 • 11:00 AM', 'Independent House — Main entrance & kitchen layout review')">View
+                                                Details</button></td>
+                                    </tr>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#VH-1018</td>
+                                        <td>Floor Plan Analysis</td>
+                                        <td>2026-10-22 • 03:30 PM</td>
+                                        <td><span class="badge bg-primary-accent text-white">Completed</span></td>
+                                        <td><button class="btn btn-secondary-custom btn-sm"
+                                                onclick="showBookingDetails('#VH-1018', 'Floor Plan Analysis', '2026-10-22 • 03:30 PM', 'Residential Apartment — 16-zone directional floor plan review')">View
+                                                Details</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="bookingDetailBox"
+                            class="mt-3 p-3 bg-primary-dark rounded border border-secondary d-none"></div>
+                    </div>
+                </div>
+
+                <!-- 4. Upload Floor Plan Panel -->
+                <div class="tab-pane fade" id="upload-floor-plan" role="tabpanel">
+                    <div class="glass-card p-4 mx-auto" style="max-width: 800px;">
+                        <h4 class="fw-bold mb-2"><i class="bi bi-cloud-arrow-up text-primary-accent me-2"></i>Upload
+                            Floor Plan</h4>
+                        <p class="text-secondary small mb-4">Submit your architectural floor plan (PDF, JPG or PNG)
+                            along with property direction details for Vastu assessment.</p>
+
+                        <div id="uploadFormFeedback" class="alert d-none mb-3"
+                            style="background: var(--secondary-bg); border: 1px solid var(--border-color); color: var(--text-primary);">
+                        </div>
+
+                        <form id="uploadFloorPlanForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Property Name</label>
+                                    <input type="text" class="form-control form-control-glass" id="ufpName"
+                                        placeholder="e.g. Greenwoods Residence" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Property Type</label>
+                                    <select class="form-select form-control-glass" id="ufpType" required>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Independent House">Independent House</option>
+                                        <option value="Villa">Villa</option>
+                                        <option value="Office">Office</option>
+                                        <option value="Commercial Property">Commercial Property</option>
+                                        <option value="Vacant Plot">Vacant Plot</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Floor Plan File (PDF, JPG,
+                                        PNG)</label>
+                                    <input type="file" class="form-control form-control-glass" id="ufpFile"
+                                        accept=".pdf,.jpg,.jpeg,.png" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Property Direction</label>
+                                    <select class="form-select form-control-glass" id="ufpDirection" required>
+                                        <option value="East-Facing (Purva)">East-Facing (Purva)</option>
+                                        <option value="North-Facing (Uttara)">North-Facing (Uttara)</option>
+                                        <option value="North-East (Ishanya)">North-East (Ishanya)</option>
+                                        <option value="West-Facing (Paschima)">West-Facing (Paschima)</option>
+                                        <option value="South-Facing (Dakshina)">South-Facing (Dakshina)</option>
+                                        <option value="Not Sure — Needs Compass Review">Not Sure — Needs Compass Review
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-bold">Additional Notes</label>
+                                    <textarea class="form-control form-control-glass" id="ufpNotes" rows="4"
+                                        placeholder="Include notes about main entrance position, existing layout or specific rooms to review..."></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-orange w-100 py-3 fw-bold"><i
+                                            class="bi bi-upload me-2"></i>Submit Floor Plan for Review</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 5. My Reports Panel -->
+                <div class="tab-pane fade" id="my-reports" role="tabpanel">
+                    <div class="glass-card p-4">
+                        <h4 class="fw-bold mb-3"><i class="bi bi-file-earmark-text text-primary-accent me-2"></i>My
+                            Reports</h4>
+                        <div class="table-responsive">
+                            <table class="table table-theme table-hover bg-transparent align-middle mb-0">
+                                <thead>
+                                    <tr class="text-secondary border-secondary">
+                                        <th>Report Name</th>
+                                        <th>Property Type</th>
+                                        <th>Consultation Date</th>
+                                        <th>Report Status</th>
+                                        <th>Download Report</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportsTableBody">
+                                    <tr class="border-secondary">
+                                        <td class="fw-bold">Floor Plan Directional Assessment — #VH-1018</td>
+                                        <td>Residential Apartment</td>
+                                        <td>2026-10-22</td>
+                                        <td><span class="badge bg-primary-accent text-white">Completed</span></td>
+                                        <td><button class="btn btn-secondary-custom btn-sm"
+                                                onclick="downloadReportSummary('Floor Plan Directional Assessment — #VH-1018', 'Residential Apartment', '2026-10-22')"><i
+                                                    class="bi bi-download me-1"></i>Download Report</button></td>
+                                    </tr>
+                                    <tr class="border-secondary">
+                                        <td class="fw-bold">Residential Layout Review — #VH-1024</td>
+                                        <td>Independent House</td>
+                                        <td>2026-11-14</td>
+                                        <td><span class="badge bg-secondary text-primary-accent">Pending
+                                                Assessment</span></td>
+                                        <td><span class="text-secondary small">Awaiting Consultation</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Payments Panel -->
+                <div class="tab-pane fade" id="payments" role="tabpanel">
+                    <div class="glass-card p-4">
+                        <h4 class="fw-bold mb-3"><i class="bi bi-credit-card text-primary-accent me-2"></i>Payments</h4>
+                        <div class="table-responsive">
+                            <table class="table table-theme table-hover bg-transparent align-middle mb-0">
+                                <thead>
+                                    <tr class="text-secondary border-secondary">
+                                        <th>Consultation ID</th>
+                                        <th>Service Name</th>
+                                        <th>Payment Date</th>
+                                        <th>Amount</th>
+                                        <th>Payment Status</th>
+                                        <th>Invoice</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#VH-1018</td>
+                                        <td>Floor Plan Analysis</td>
+                                        <td>2026-10-20</td>
+                                        <td class="fw-bold">₹4,500</td>
+                                        <td><span class="badge bg-primary-accent text-white">Recorded</span></td>
+                                        <td><button class="btn btn-secondary-custom btn-sm"
+                                                onclick="downloadInvoiceSummary('#VH-1018', 'Floor Plan Analysis', '2026-10-20', '₹4,500')"><i
+                                                    class="bi bi-file-earmark-arrow-down me-1"></i>Invoice</button></td>
+                                    </tr>
+                                    <tr class="border-secondary">
+                                        <td class="font-monospace text-primary-accent">#VH-1024</td>
+                                        <td>Residential Vastu</td>
+                                        <td>—</td>
+                                        <td class="fw-bold">₹7,500</td>
+                                        <td><span class="badge bg-secondary text-primary-accent">Pending</span></td>
+                                        <td><span class="text-secondary small">Issued Upon Payment</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. My Profile Panel -->
+                <div class="tab-pane fade" id="my-profile" role="tabpanel">
+                    <div class="glass-card p-4 mx-auto" style="max-width: 800px;">
+                        <h4 class="fw-bold mb-3"><i class="bi bi-person-circle text-primary-accent me-2"></i>My Profile
+                        </h4>
+                        <div id="profileFeedback" class="alert d-none mb-3"
+                            style="background: var(--secondary-bg); border: 1px solid var(--border-color); color: var(--text-primary);">
+                        </div>
+                        <form id="profileForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Full Name</label>
+                                    <input type="text" class="form-control form-control-glass" id="profName"
+                                        value="Aarav Sharma" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Email Address</label>
+                                    <input type="email" class="form-control form-control-glass" id="profEmail"
+                                        value="aarav@vastuharmony.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-glass" id="profPhone"
+                                        value="+91 98765 43210" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-bold">Primary Property Type</label>
+                                    <select class="form-select form-control-glass" id="profPropType">
+                                        <option selected>Independent House</option>
+                                        <option>Apartment</option>
+                                        <option>Villa</option>
+                                        <option>Office / Commercial</option>
+                                        <option>Vacant Plot</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-orange py-2 px-4 fw-bold">Update
+                                        Profile</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 8. Settings Panel -->
+                <div class="tab-pane fade" id="settings" role="tabpanel">
+                    <div class="glass-card p-4 mx-auto" style="max-width: 800px;">
+                        <h4 class="fw-bold mb-3"><i class="bi bi-gear text-primary-accent me-2"></i>Settings</h4>
+                        <div id="settingsFeedback" class="alert d-none mb-3"
+                            style="background: var(--secondary-bg); border: 1px solid var(--border-color); color: var(--text-primary);">
+                        </div>
+                        <form id="settingsForm">
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="notifBookings" checked>
+                                <label class="form-check-label text-secondary small" for="notifBookings">Receive email
+                                    notifications for consultation schedule updates</label>
+                            </div>
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="notifReports" checked>
+                                <label class="form-check-label text-secondary small" for="notifReports">Notify me when
+                                    floor plan assessment reports are ready</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary-orange py-2 px-4 fw-bold">Save
+                                Preferences</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showBookingDetails(id, type, date, notes) {
+            var box = document.getElementById('bookingDetailBox');
+            if (!box) return;
+            box.classList.remove('d-none');
+            box.innerHTML = '<strong>Booking ' + id + ' (' + type + ')</strong><br><span class="text-secondary small">Scheduled: ' + date + ' | Notes: ' + notes + '</span>';
+        }
+
+        function downloadReportSummary(reportName, propType, date) {
+            var content = "VASTU HARMONY — CONSULTATION REPORT SUMMARY\n" +
+                "===========================================\n" +
+                "Report: " + reportName + "\n" +
+                "Property Type: " + propType + "\n" +
+                "Assessment Date: " + date + "\n\n" +
+                "Observations:\n" +
+                "- Directional orientation and entrance placement reviewed.\n" +
+                "- Room zoning evaluated according to traditional Vastu Shastra principles.\n" +
+                "- Practical non-structural recommendations documented for balanced spatial flow.\n";
+            var blob = new Blob([content], { type: 'text/plain' });
+            var a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = reportName.replace(/[^a-zA-Z0-9_-]/g, '_') + '.txt';
+            a.click();
+        }
+
+        function downloadInvoiceSummary(id, service, date, amount) {
+            var content = "VASTU HARMONY — CONSULTATION INVOICE RECORD\n" +
+                "===========================================\n" +
+                "Consultation ID: " + id + "\n" +
+                "Service Name: " + service + "\n" +
+                "Date: " + date + "\n" +
+                "Amount: " + amount + "\n";
+            var blob = new Blob([content], { type: 'text/plain' });
+            var a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'Invoice_' + id.replace('#', '') + '.txt';
+            a.click();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var bookForm = document.getElementById('bookConsultationForm');
+            if (bookForm) {
+                bookForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var type = document.getElementById('bcType').value;
+                    var propType = document.getElementById('bcPropertyType').value;
+                    var date = document.getElementById('bcDate').value;
+                    var time = document.getElementById('bcTime').value;
+                    var loc = document.getElementById('bcLocation').value;
+                    var details = document.getElementById('bcDetails').value;
+                    var newId = '#VH-' + Math.floor(1025 + Math.random() * 900);
+
+                    var tbody = document.getElementById('bookingsTableBody');
+                    if (tbody) {
+                        var tr = document.createElement('tr');
+                        tr.className = 'border-secondary';
+                        tr.innerHTML = '<td class="font-monospace text-primary-accent">' + newId + '</td>' +
+                            '<td>' + type + '</td>' +
+                            '<td>' + date + ' • ' + time + '</td>' +
+                            '<td><span class="badge bg-secondary text-primary-accent">Requested</span></td>' +
+                            '<td><button class="btn btn-secondary-custom btn-sm" onclick="showBookingDetails(\'' + newId + '\', \'' + type + '\', \'' + date + ' • ' + time + '\', \'' + propType + ' (' + loc + ')\')">View Details</button></td>';
+                        tbody.insertBefore(tr, tbody.firstChild);
+                    }
+
+                    var totalEl = document.getElementById('statTotalConsultations');
+                    var upcomingEl = document.getElementById('statUpcomingBookings');
+                    if (totalEl) totalEl.innerText = parseInt(totalEl.innerText, 10) + 1;
+                    if (upcomingEl) upcomingEl.innerText = parseInt(upcomingEl.innerText, 10) + 1;
+
+                    var fb = document.getElementById('bookingFormFeedback');
+                    if (fb) {
+                        fb.classList.remove('d-none');
+                        fb.innerHTML = '<i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Consultation request <strong>' + newId + '</strong> (' + type + ') has been added to My Bookings.';
+                    }
+                    bookForm.reset();
+                });
+            }
+
+            var uploadForm = document.getElementById('uploadFloorPlanForm');
+            if (uploadForm) {
+                uploadForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var propName = document.getElementById('ufpName').value;
+                    var propType = document.getElementById('ufpType').value;
+                    var dir = document.getElementById('ufpDirection').value;
+                    var fileInput = document.getElementById('ufpFile');
+                    var fileName = (fileInput && fileInput.files && fileInput.files[0]) ? fileInput.files[0].name : 'FloorPlan';
+                    var today = new Date().toISOString().slice(0, 10);
+
+                    var rbody = document.getElementById('reportsTableBody');
+                    if (rbody) {
+                        var tr = document.createElement('tr');
+                        tr.className = 'border-secondary';
+                        tr.innerHTML = '<td class="fw-bold">' + propName + ' (' + fileName + ')</td>' +
+                            '<td>' + propType + ' • ' + dir + '</td>' +
+                            '<td>' + today + '</td>' +
+                            '<td><span class="badge bg-secondary text-primary-accent">Floor Plan Submitted</span></td>' +
+                            '<td><span class="text-secondary small">Under Review</span></td>';
+                        rbody.insertBefore(tr, rbody.firstChild);
+                    }
+
+                    var pendingEl = document.getElementById('statPendingReports');
+                    if (pendingEl) pendingEl.innerText = parseInt(pendingEl.innerText, 10) + 1;
+
+                    var fb = document.getElementById('uploadFormFeedback');
+                    if (fb) {
+                        fb.classList.remove('d-none');
+                        fb.innerHTML = '<i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Floor plan file <strong>' + fileName + '</strong> for <strong>' + propName + '</strong> has been logged in My Reports.';
+                    }
+                    uploadForm.reset();
+                });
+            }
+
+            var profileForm = document.getElementById('profileForm');
+            if (profileForm) {
+                profileForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var nameVal = document.getElementById('profName').value;
+                    var sidebarName = document.getElementById('sidebarClientName');
+                    if (sidebarName && nameVal) sidebarName.innerText = nameVal;
+                    var fb = document.getElementById('profileFeedback');
+                    if (fb) {
+                        fb.classList.remove('d-none');
+                        fb.innerHTML = '<i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Client profile details updated for this session.';
+                    }
+                });
+            }
+
+            var settingsForm = document.getElementById('settingsForm');
+            if (settingsForm) {
+                settingsForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var fb = document.getElementById('settingsFeedback');
+                    if (fb) {
+                        fb.classList.remove('d-none');
+                        fb.innerHTML = '<i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Portal notification preferences saved.';
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

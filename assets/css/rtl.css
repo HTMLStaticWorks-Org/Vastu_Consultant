@@ -1,0 +1,170 @@
+/* RTL Support */
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Bootstrap Utility Overrides for RTL */
+[dir="rtl"] .text-start,
+[dir="rtl"] .text-lg-start,
+[dir="rtl"] .text-md-start,
+[dir="rtl"] .text-sm-start {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-end,
+[dir="rtl"] .text-lg-end,
+[dir="rtl"] .text-md-end,
+[dir="rtl"] .text-sm-end {
+    text-align: left !important;
+}
+
+[dir="rtl"] .start-0 {
+    right: 0 !important;
+    left: auto !important;
+}
+
+[dir="rtl"] .end-0 {
+    left: 0 !important;
+    right: auto !important;
+}
+
+[dir="rtl"] .sidebar-link i {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .sidebar-link {
+    border-left: none;
+    border-right: 3px solid transparent;
+}
+
+[dir="rtl"] .sidebar-link:hover, [dir="rtl"] .sidebar-link.active {
+    border-right-color: var(--primary-accent);
+}
+
+[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .pe-3 {
+    padding-right: 0 !important;
+    padding-left: 1rem !important;
+}
+
+[dir="rtl"] .ps-3 {
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+}
+
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+[dir="rtl"] .me-5 { margin-right: 0 !important; margin-left: 3rem !important; }
+
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+[dir="rtl"] .ms-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
+[dir="rtl"] .ms-5 { margin-left: 0 !important; margin-right: 3rem !important; }
+
+[dir="rtl"] .float-end {
+    float: left !important;
+}
+
+[dir="rtl"] .float-start {
+    float: right !important;
+}
+
+/* RTL Password Eye Icon Positioning */
+[dir="rtl"] .position-relative .position-absolute.end-0 {
+    left: 0 !important;
+    right: auto !important;
+}
+
+[dir="rtl"] .position-relative .me-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .form-control-glass.pe-5 {
+    padding-right: 0.85rem !important;
+    padding-left: 2.75rem !important;
+}
+
+/* RTL Tag Line (Eyebrow Label) and Button Alignment */
+[dir="rtl"] .eyebrow-label {
+    direction: ltr;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+[dir="rtl"] .btn {
+    text-align: right;
+}
+
+[dir="rtl"] .btn .bi-arrow-right {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+/* RTL English Direction Corrections for Hero Sections */
+[dir="rtl"] .hero-creative-workshop h1,
+[dir="rtl"] .hero-creative-workshop p,
+[dir="rtl"] .hero-design-journey h1,
+[dir="rtl"] .hero-design-journey p,
+[dir="rtl"] .hero-design-journey h6,
+[dir="rtl"] .hero-design-journey small,
+[dir="rtl"] .journey-stages h4,
+[dir="rtl"] .journey-stages p,
+[dir="rtl"] .hero-design-journey .eyebrow-label,
+[dir="rtl"] .hero-creative-workshop .eyebrow-label {
+    direction: ltr;
+    text-align: right;
+}
+
+[dir="rtl"] .hero-creative-workshop .btn,
+[dir="rtl"] .hero-design-journey .btn {
+    direction: ltr;
+}
+
+/* RTL Timeline Styling */
+[dir="rtl"] .timeline-track {
+    padding-left: 0;
+    padding-right: 2rem;
+    border-left: none;
+    border-right: 2px dashed var(--border-color);
+}
+
+[dir="rtl"] .timeline-item::before {
+    left: auto;
+    right: -2.4rem;
+}
+
+[dir="rtl"] .timeline-item h4,
+[dir="rtl"] .timeline-item p,
+[dir="rtl"] .timeline-item .badge {
+    direction: ltr;
+    text-align: right;
+}
+
+/* RTL Checkbox Alignment Override */
+[dir="rtl"] .form-check {
+    padding-left: 0 !important;
+    padding-right: 1.5em !important;
+    text-align: right !important;
+}
+
+[dir="rtl"] .form-check .form-check-input {
+    float: right !important;
+    margin-left: 0 !important;
+    margin-right: -1.5em !important;
+}
+
