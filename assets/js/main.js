@@ -76,15 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Mobile Menu Scroll Lock ---
-    const navbarNav = document.getElementById('navbarNav');
-    if (navbarNav) {
-        navbarNav.addEventListener('show.bs.collapse', () => {
-            document.body.style.overflow = 'hidden';
-        });
-        navbarNav.addEventListener('hidden.bs.collapse', () => {
-            document.body.style.overflow = '';
-        });
+    // --- Dynamic Fixed Navbar Padding Adjustment ---
+    const fixedNav = document.querySelector('.navbar-glass');
+    if (fixedNav) {
+        const syncNavPadding = () => {
+            if (!document.body.classList.contains('auth-page') && !document.body.classList.contains('dashboard-body')) {
+                document.body.style.paddingTop = fixedNav.offsetHeight + 'px';
+            }
+        };
+        syncNavPadding();
+        window.addEventListener('resize', syncNavPadding);
     }
 
     // --- Scroll Reveal Animations ---

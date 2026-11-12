@@ -31,7 +31,7 @@
 <body data-theme="light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-xl navbar-glass">
+    <nav class="navbar navbar-expand-xl navbar-glass sticky-top">
         <div class="container-fluid px-4">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-compass-fill"></i>
@@ -74,7 +74,7 @@
     <section class="hero-pricing-stacked">
         <div class="container">
             <div class="row align-items-center g-4 g-lg-5">
-                <div class="col-lg-6 fade-up text-center text-lg-start">
+                <div class="col-lg-6 fade-up text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start">
                     <div class="eyebrow-label">CONSULTATION PLANS & GUIDANCE</div>
                     <h1 class="display-4 mb-3">
                         Structured Vastu <span class="text-primary-accent">Consultation Plans</span>
@@ -91,21 +91,33 @@
 
                 <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
                     <div class="glass-card p-3 position-relative">
-                        <img src="https://vastuagent.ai/images/heritage/hero.webp?auto=format&fit=crop&w=800&q=80"
-                            class="img-fluid rounded border border-secondary w-100 mb-2"
-                            style="max-height: 195px; object-fit: cover;" alt="Architectural Floor Plan Review">
-                        <div class="py-2.5 px-3 bg-primary-dark rounded border border-secondary">
-                            <h5 class="mb-2 fs-6"><i class="bi bi-compass-fill text-primary-accent me-2"></i> Core
-                                Consultation Services</h5>
-                            <div class="row g-2 text-secondary small">
-                                <div class="col-6"><span>Residential:</span> <strong
-                                        class="text-primary-accent">Homes & Villas</strong></div>
-                                <div class="col-6"><span>Commercial:</span> <strong
-                                        class="text-primary-accent">Offices & Retail</strong></div>
-                                <div class="col-6"><span>Plot & Land:</span> <strong
-                                        class="text-primary-accent">Orientation</strong></div>
-                                <div class="col-6"><span>Floor Plan:</span> <strong
-                                        class="text-primary-accent">Blueprint Review</strong></div>
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80"
+                            class="img-fluid rounded border border-secondary w-100 mb-3"
+                            style="max-height: 220px; object-fit: cover;" alt="Vastu Consultation Plans and Architectural Harmony">
+                        <div class="core-services-panel bg-primary-dark rounded border border-secondary">
+                            <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-secondary">
+                                <h5 class="mb-0 fs-6 text-start d-flex align-items-center">
+                                    <i class="bi bi-compass-fill text-primary-accent me-2"></i> Core Consultation Services
+                                </h5>
+                                <span class="badge bg-secondary text-primary-accent border border-secondary px-2 py-0.5" style="font-size: 0.7rem; letter-spacing: 0.04em;">KEY DOMAINS</span>
+                            </div>
+                            <div class="core-services-grid">
+                                <div class="core-service-item">
+                                    <span class="core-service-label">Residential:</span>
+                                    <strong class="core-service-val">Homes & Villas</strong>
+                                </div>
+                                <div class="core-service-item">
+                                    <span class="core-service-label">Commercial:</span>
+                                    <strong class="core-service-val">Offices & Retail</strong>
+                                </div>
+                                <div class="core-service-item">
+                                    <span class="core-service-label">Plot & Land:</span>
+                                    <strong class="core-service-val">Orientation</strong>
+                                </div>
+                                <div class="core-service-item">
+                                    <span class="core-service-label">Floor Plan:</span>
+                                    <strong class="core-service-val">Blueprint Review</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -322,11 +334,13 @@
                 <p class="text-secondary mx-auto mb-4" style="max-width: 620px;">Whether you're planning a new home,
                     improving an existing property or designing a workspace, our Vastu consultation services can help
                     you make informed decisions.</p>
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 hero-cta-group mx-auto">
-                    <a href="contact.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold hero-btn">Schedule Your
-                        Consultation</a>
-                    <a href="services.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold hero-btn">Explore Our
-                        Services</a>
+                <div class="assessment-cta-group d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 mx-auto mt-4">
+                    <a href="contact.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold assessment-btn">
+                        <i class="bi bi-calendar-check me-2"></i>Schedule Your Consultation
+                    </a>
+                    <a href="services.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold assessment-btn">
+                        <i class="bi bi-compass me-2"></i>Explore Our Services
+                    </a>
                 </div>
             </div>
         </div>
@@ -335,8 +349,8 @@
     <!-- Footer -->
     <footer class="footer bg-secondary-dark border-top border-secondary">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
+            <div class="row g-4 g-lg-5">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
                         <i class="bi bi-compass-fill"></i>
                         <span>Vastu <span class="text-primary-accent">Harmony</span></span>
@@ -356,7 +370,7 @@
                             class="social-icon social-icon-circle" title="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                     <h5 class="mb-4">Vastu Services</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="services.html" class="footer-link">Residential Vastu</a></li>
@@ -365,7 +379,7 @@
                         <li class="mb-2"><a href="services.html" class="footer-link">Floor Plan Analysis</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                     <h5 class="mb-4">Client Portal</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
@@ -374,7 +388,7 @@
                         <li class="mb-2"><a href="contact.html" class="footer-link">Book Consultation</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <h5 class="mb-4">Vastu Insights</h5>
                     <form class="d-flex gap-2 mb-3" style="max-width: 440px;">
                         <input type="email" class="form-control form-control-glass" placeholder="Enter your email">

@@ -35,3 +35,30 @@
     border-color: #C49A45;
     color: #29352F !important;
 }
+
+/* FAQ Accordion Visibility & High Contrast in Dark Mode */
+[data-theme="dark"] .accordion-glass .accordion-item {
+    background-color: #232E28 !important;
+    border-color: rgba(216, 195, 165, 0.28) !important;
+}
+
+[data-theme="dark"] .accordion-glass .accordion-button {
+    background-color: #232E28 !important;
+    color: #FAF7F0 !important;
+}
+
+[data-theme="dark"] .accordion-glass .accordion-button:not(.collapsed) {
+    background-color: rgba(196, 154, 69, 0.15) !important;
+    color: #C49A45 !important;
+    border-bottom: 1px solid rgba(216, 195, 165, 0.28) !important;
+}
+
+/* Ensure the dropdown chevron icon is clearly visible in dark mode */
+[data-theme="dark"] .accordion-glass .accordion-button::after {
+    filter: invert(1) brightness(2) !important;
+}
+
+[data-theme="dark"] .accordion-glass .accordion-body {
+    background-color: #232E28 !important;
+    color: #E2D9CC !important;
+}

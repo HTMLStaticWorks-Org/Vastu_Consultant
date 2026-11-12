@@ -31,7 +31,7 @@
 <body data-theme="light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-xl navbar-glass">
+    <nav class="navbar navbar-expand-xl navbar-glass sticky-top">
         <div class="container-fluid px-4">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-compass-fill"></i>
@@ -203,36 +203,42 @@
             </div>
 
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 fade-up">
-                    <div class="glass-card p-4 text-center">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=80"
-                            class="rounded-circle mb-3 border border-primary p-1"
-                            style="width: 110px; height: 110px; object-fit: cover;" alt="Residential Vastu Advisory">
-                        <h4 class="mb-1">Residential Vastu Advisory</h4>
+                <div class="col-lg-4 col-md-6 fade-up d-flex align-items-stretch">
+                    <div class="glass-card p-4 text-center h-100 w-100 specialized-card">
+                        <div class="specialized-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=400&q=80"
+                                class="rounded-circle border border-primary p-1 w-100 h-100"
+                                style="object-fit: cover;" alt="Residential Vastu Advisory">
+                        </div>
+                        <h4 class="mb-1 specialized-title">Residential Vastu Advisory</h4>
                         <small class="text-primary-accent fw-bold d-block mb-3">Apartments, Houses & Villas</small>
-                        <p class="text-secondary small mb-0">Focused on main entrance assessment, bedroom and kitchen layout review, and room direction analysis.</p>
+                        <p class="text-secondary small mb-0 specialized-desc">Focused on main entrance assessment, bedroom and kitchen layout review, and room direction analysis.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.1s;">
-                    <div class="glass-card p-4 text-center">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80"
-                            class="rounded-circle mb-3 border border-primary p-1"
-                            style="width: 110px; height: 110px; object-fit: cover;" alt="Commercial & Office Vastu">
-                        <h4 class="mb-1">Commercial & Office Vastu</h4>
+                <div class="col-lg-4 col-md-6 fade-up d-flex align-items-stretch" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 text-center h-100 w-100 specialized-card">
+                        <div class="specialized-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=400&q=80"
+                                class="rounded-circle border border-primary p-1 w-100 h-100"
+                                style="object-fit: cover;" alt="Commercial & Office Vastu">
+                        </div>
+                        <h4 class="mb-1 specialized-title">Commercial & Office Vastu</h4>
                         <small class="text-primary-accent fw-bold d-block mb-3">Workspaces & Business Properties</small>
-                        <p class="text-secondary small mb-0">Focused on office layout assessment, reception and entrance review, workspace planning and meeting rooms.</p>
+                        <p class="text-secondary small mb-0 specialized-desc">Focused on office layout assessment, reception and entrance review, workspace planning and meeting rooms.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
-                    <div class="glass-card p-4 text-center">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80"
-                            class="rounded-circle mb-3 border border-primary p-1"
-                            style="width: 110px; height: 110px; object-fit: cover;" alt="Plot & Floor Plan Analysis">
-                        <h4 class="mb-1">Plot & Floor Plan Desk</h4>
+                <div class="col-lg-4 col-md-6 fade-up d-flex align-items-stretch" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 text-center h-100 w-100 specialized-card">
+                        <div class="specialized-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=400&q=80"
+                                class="rounded-circle border border-primary p-1 w-100 h-100"
+                                style="object-fit: cover;" alt="Plot & Floor Plan Analysis">
+                        </div>
+                        <h4 class="mb-1 specialized-title">Plot & Floor Plan Desk</h4>
                         <small class="text-primary-accent fw-bold d-block mb-3">Site Orientation & Blueprints</small>
-                        <p class="text-secondary small mb-0">Focused on plot direction assessment, shape and road position analysis, and architectural floor plan review.</p>
+                        <p class="text-secondary small mb-0 specialized-desc">Focused on plot direction assessment, shape and road position analysis, and architectural floor plan review.</p>
                     </div>
                 </div>
             </div>
@@ -300,8 +306,8 @@
     <!-- Footer -->
     <footer class="footer bg-secondary-dark border-top border-secondary">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
+            <div class="row g-4 g-lg-5">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
                         <i class="bi bi-compass-fill"></i>
                         <span>Vastu <span class="text-primary-accent">Harmony</span></span>
@@ -319,7 +325,7 @@
                             class="social-icon social-icon-circle" title="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                     <h5 class="mb-4">Vastu Services</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="services.html" class="footer-link">Residential Vastu</a></li>
@@ -328,7 +334,7 @@
                         <li class="mb-2"><a href="services.html" class="footer-link">Floor Plan Analysis</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                     <h5 class="mb-4">Client Portal</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
@@ -337,7 +343,7 @@
                         <li class="mb-2"><a href="contact.html" class="footer-link">Book Consultation</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <h5 class="mb-4">Vastu Insights</h5>
                     <form class="d-flex gap-2 mb-3" style="max-width: 440px;">
                         <input type="email" class="form-control form-control-glass" placeholder="Enter your email">

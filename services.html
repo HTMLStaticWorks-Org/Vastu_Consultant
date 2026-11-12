@@ -31,7 +31,7 @@
 <body data-theme="light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-xl navbar-glass">
+    <nav class="navbar navbar-expand-xl navbar-glass sticky-top">
         <div class="container-fluid px-4">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-compass-fill"></i>
@@ -93,7 +93,7 @@
 
                 <div class="col-lg-6 fade-up" style="transition-delay: 0.1s;">
                     <div class="glass-card p-3 position-relative">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80"
                             class="img-fluid rounded border border-secondary w-100"
                             style="max-height: 290px; object-fit: cover;"
                             alt="Vastu Consultation and Architectural Guidance">
@@ -231,9 +231,9 @@
                                 <li><i class="bi bi-check2 text-primary-accent me-1"></i> Personalized Recommendations
                                 </li>
                             </ul>
-                            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center justify-content-between gap-2">
+                            <div class="d-flex flex-column flex-xl-row align-items-stretch align-items-xl-center justify-content-between gap-2">
                                 <span
-                                    class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-sm-start text-nowrap">Apartments
+                                    class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-xl-start text-nowrap">Apartments
                                     • Houses • Villas</span>
                                 <a href="contact.html" class="btn btn-primary-orange btn-sm fw-semibold text-center text-nowrap">Book Home
                                     Consultation</a>
@@ -266,8 +266,8 @@
                                 <li><i class="bi bi-check2 text-primary-accent me-1"></i> Commercial Floor Plan Review
                                 </li>
                             </ul>
-                            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center justify-content-between gap-2">
-                                <span class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-sm-start text-nowrap">Offices
+                            <div class="d-flex flex-column flex-xl-row align-items-stretch align-items-xl-center justify-content-between gap-2">
+                                <span class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-xl-start text-nowrap">Offices
                                     • Retail • Commercial</span>
                                 <a href="contact.html" class="btn btn-primary-orange btn-sm fw-semibold text-center text-nowrap">Book Office
                                     Consultation</a>
@@ -297,9 +297,9 @@
                                 <li><i class="bi bi-check2 text-primary-accent me-1"></i> Entrance Planning</li>
                                 <li><i class="bi bi-check2 text-primary-accent me-1"></i> Site Orientation Guidance</li>
                             </ul>
-                            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center justify-content-between gap-2">
+                            <div class="d-flex flex-column flex-xl-row align-items-stretch align-items-xl-center justify-content-between gap-2">
                                 <span
-                                    class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-sm-start text-nowrap">Pre-Purchase
+                                    class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-xl-start text-nowrap">Pre-Purchase
                                     • Site Planning</span>
                                 <a href="contact.html" class="btn btn-primary-orange btn-sm fw-semibold text-center text-nowrap">Book Plot
                                     Consultation</a>
@@ -330,9 +330,9 @@
                                 <li><i class="bi bi-check2 text-primary-accent me-1"></i> Detailed Observations</li>
                                 <li><i class="bi bi-check2 text-primary-accent me-1"></i> Consultation Report</li>
                             </ul>
-                            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center justify-content-between gap-2">
+                            <div class="d-flex flex-column flex-xl-row align-items-stretch align-items-xl-center justify-content-between gap-2">
                                 <span
-                                    class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-sm-start text-nowrap">Architectural
+                                    class="badge bg-primary-dark text-primary-accent border border-secondary py-2 text-center text-xl-start text-nowrap">Architectural
                                     Blueprints</span>
                                 <a href="dashboard.html" class="btn btn-primary-orange btn-sm fw-semibold text-center text-nowrap">Upload Your
                                     Floor Plan</a>
@@ -605,11 +605,13 @@
                 <p class="text-secondary mx-auto mb-4" style="max-width: 620px;">Whether you're planning a new home,
                     improving an existing property or designing a workspace, our Vastu consultation services can help
                     you make informed decisions.</p>
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 hero-cta-group mx-auto">
-                    <a href="contact.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold hero-btn"><i
-                            class="bi bi-calendar-check me-1"></i> Schedule Your Consultation</a>
-                    <a href="dashboard.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold hero-btn">Upload Your Floor
-                        Plan</a>
+                <div class="assessment-cta-group d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 mx-auto mt-4">
+                    <a href="contact.html" class="btn btn-primary-orange btn-lg px-4 py-3 fw-bold assessment-btn">
+                        <i class="bi bi-calendar-check me-2"></i>Schedule Your Consultation
+                    </a>
+                    <a href="dashboard.html" class="btn btn-secondary-custom btn-lg px-4 py-3 fw-bold assessment-btn">
+                        <i class="bi bi-upload me-2"></i>Upload Your Floor Plan
+                    </a>
                 </div>
             </div>
         </div>
@@ -618,8 +620,8 @@
     <!-- Footer -->
     <footer class="footer bg-secondary-dark border-top border-secondary">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
+            <div class="row g-4 g-lg-5">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
                         <i class="bi bi-compass-fill"></i>
                         <span>Vastu <span class="text-primary-accent">Harmony</span></span>
@@ -639,7 +641,7 @@
                             class="social-icon social-icon-circle" title="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                     <h5 class="mb-4">Vastu Services</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="services.html" class="footer-link">Residential Vastu</a></li>
@@ -648,7 +650,7 @@
                         <li class="mb-2"><a href="services.html" class="footer-link">Floor Plan Analysis</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                     <h5 class="mb-4">Client Portal</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
@@ -657,7 +659,7 @@
                         <li class="mb-2"><a href="contact.html" class="footer-link">Book Consultation</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <h5 class="mb-4">Vastu Insights</h5>
                     <form class="d-flex gap-2 mb-3" style="max-width: 440px;">
                         <input type="email" class="form-control form-control-glass" placeholder="Enter your email">

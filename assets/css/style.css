@@ -62,12 +62,16 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: clip;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--primary-bg);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
 }
@@ -196,16 +200,29 @@ a:hover {
 .bg-primary-dark { background-color: var(--primary-bg) !important; }
 .bg-secondary-dark { background-color: var(--secondary-bg) !important; }
 
-/* Navbar - Glassmorphism */
+/* Navbar - Glassmorphism Fixed Top */
 .navbar-glass {
     background: var(--navbar-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    position: sticky;
+    position: fixed !important;
     top: 0;
-    z-index: 1030;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1050;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body:has(.navbar-glass) {
+    padding-top: 76px;
+}
+
+@media (max-width: 991.98px) {
+    body:has(.navbar-glass) {
+        padding-top: 70px;
+    }
 }
 
 .navbar-brand {
@@ -619,14 +636,15 @@ a:hover {
     }
 }
 
-/* Journey Stages Grid for Home 2 */
+/* Journey Stages Grid for Home 2 - Clean Desktop Side-by-Side & Tablet/Mobile Stacked */
 .journey-stages {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     align-items: stretch;
+    width: 100%;
 }
 
 .journey-stage-card {
@@ -634,23 +652,52 @@ a:hover {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-card);
     padding: 1.5rem;
-    text-align: center;
+    text-align: left;
     position: relative;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
     z-index: 2;
+    transform: none !important;
+    min-width: 0;
+    overflow: hidden;
 }
 
-.journey-stage-card:hover, .journey-stage-card.active {
-    transform: translateY(-6px);
+.journey-stage-card:hover {
+    transform: translateY(-6px) !important;
     border-color: var(--primary-accent);
     box-shadow: 0 14px 35px var(--glow-color);
 }
 
-.journey-stage-card.active h4 {
-    color: var(--text-primary) !important;
+.journey-stage-card h4 {
+    min-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.journey-stage-card p {
+    flex-grow: 1;
+    min-height: 3.5rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.journey-stage-card .stage-img-wrapper {
+    margin-top: auto;
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--primary-bg);
 }
 
 .journey-stage-card .badge,
@@ -671,26 +718,60 @@ a:hover {
     border: 1px solid var(--border-color) !important;
 }
 
-.journey-stage-card.active .badge.bg-primary-accent {
-    background-color: var(--primary-accent) !important;
-    color: #FFFFFF !important;
-    border-color: var(--primary-accent) !important;
-}
-
 .journey-stage-img {
     width: 100%;
-    aspect-ratio: 2 / 1;
+    height: 100%;
     object-fit: cover;
-    object-position: top center;
-    border-radius: 12px;
-    margin-top: 1rem;
-    border: 1px solid var(--border-color);
-    background: var(--primary-bg);
+    object-position: center;
+    display: block;
+    border-radius: 0;
+    margin-top: 0;
+    border: none;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (max-width: 991.98px) {
+.journey-stage-card:hover .journey-stage-img {
+    transform: scale(1.05);
+}
+
+/* Tablet (768px - 1024px) & Mobile (< 768px) - STACKED VERTICALLY */
+@media (max-width: 1024px) {
     .journey-stages {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .journey-stage-card {
+        padding: 1.5rem;
+    }
+    .journey-stage-card h4 {
+        font-size: 1.2rem;
+        min-height: auto;
+    }
+    .journey-stage-card p {
+        font-size: 0.92rem;
+        min-height: auto;
+        margin-bottom: 1.25rem;
+    }
+    .journey-stage-card .stage-img-wrapper {
+        height: 220px;
+    }
+}
+
+/* Mobile fine-tuning (< 576px) - Clean full-width stacked */
+@media (max-width: 575.98px) {
+    .journey-stages {
+        max-width: 100%;
+        gap: 1.25rem;
+    }
+    .journey-stage-card {
+        padding: 1.25rem;
+    }
+    .journey-stage-card .stage-img-wrapper {
+        height: 180px;
     }
 }
 
@@ -1149,13 +1230,15 @@ footer .social-icon-circle i {
         top: 100%;
         left: 0;
         right: 0;
-        z-index: 1029;
+        z-index: 1051;
         background: var(--sidebar-bg);
         border: 1px solid var(--border-color);
         border-top: 0;
         border-radius: 0 0 16px 16px;
         padding: 1.25rem 1rem 1rem;
         box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
     
     /* Active Menu Highlight in Mobile / Hamburger Drawer */
@@ -1258,18 +1341,25 @@ footer .social-icon-circle i {
     white-space: nowrap;
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 576px) and (max-width: 991.98px) {
     .hero-cta-group {
-        max-width: 480px;
+        max-width: 620px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
     .hero-cta-group .hero-btn {
-        flex: 1 1 0;
-        min-width: 0;
+        flex: 0 1 auto;
+        min-width: auto;
         text-align: center;
         justify-content: center;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
     }
     .hero-creative-workshop .hero-stats-bar {
         max-width: 480px;
@@ -1288,6 +1378,9 @@ footer .social-icon-circle i {
     .hero-cta-group {
         max-width: 100%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
     }
     .hero-cta-group .hero-btn {
         width: 100%;
@@ -1302,6 +1395,100 @@ footer .social-icon-circle i {
     .hero-creative-workshop .hero-stats-bar small {
         font-size: 0.72rem;
         line-height: 1.25;
+    }
+}
+
+/* Footer 2x2 Grid Layout at 1024px and Tablet View across all pages */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .footer .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        row-gap: 2.5rem !important;
+    }
+    .footer .row > [class*="col-"] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Specialized Expertise Card Uniform Sizing (About page) */
+.specialized-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.specialized-card .specialized-img-wrap {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1rem auto;
+}
+.specialized-card .specialized-title {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.specialized-card .specialized-desc {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Assessment CTA Section (Services & Pricing pages) */
+.assessment-cta-group {
+    width: 100%;
+    max-width: 580px;
+    margin-top: 1.5rem;
+}
+
+.assessment-btn {
+    width: 100%;
+    min-height: 52px;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.5rem !important;
+    border-radius: var(--radius-btn);
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+/* On Desktop (>= 992px): Side-by-side with equal 50% width */
+@media (min-width: 992px) {
+    .assessment-btn {
+        flex: 1 1 0;
+        width: 100%;
+    }
+}
+
+/* On Small Screens (< 992px, including tablets and mobile): Stacked Vertically */
+@media (max-width: 991.98px) {
+    .assessment-cta-group {
+        max-width: 380px;
+        gap: 0.85rem !important;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .assessment-btn {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .assessment-cta-group {
+        max-width: 100%;
+    }
+    .assessment-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem !important;
     }
 }
 
@@ -1463,31 +1650,124 @@ footer .social-icon-circle i {
     }
 }
 
-/* Blog Category Chips Mobile Layout */
+/* Blog Category Chips: 2-Row Arranged Layout (2 Top, 3 Bottom) */
+.blog-category-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.blog-categories-label {
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.blog-category-chips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    width: 100%;
+    overflow: visible !important;
+}
+
+.blog-chips-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.blog-chips-row-1 {
+    max-width: 480px;
+}
+
+.blog-chips-row-2 {
+    max-width: 580px;
+}
+
+.blog-category-chips .btn {
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.15rem;
+}
+
 @media (max-width: 575.98px) {
     .blog-category-chips {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5rem !important;
-        overflow-x: visible !important;
-        padding: 0.5rem 0 !important;
+        gap: 0.5rem;
     }
-    
-    .blog-category-chips span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 !important;
-        font-size: 0.75rem;
+
+    .blog-chips-row {
+        gap: 0.45rem;
     }
-    
+
     .blog-category-chips .btn {
-        width: 100% !important;
-        padding-left: 0.25rem !important;
-        padding-right: 0.25rem !important;
-        font-size: 0.75rem !important;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        font-size: 0.78rem;
+        padding: 0.35rem 0.75rem;
+    }
+}
+
+/* --- Core Consultation Services Box (Pricing page) --- */
+.core-services-panel {
+    padding: 1.15rem 1.25rem;
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+}
+
+.core-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
+}
+
+.core-service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--border-color);
+    min-width: 0;
+}
+
+.core-service-label {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.core-service-val {
+    font-size: 0.82rem;
+    color: var(--primary-accent);
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: end;
+}
+
+@media (max-width: 575.98px) {
+    .core-services-panel {
+        padding: 1rem;
+    }
+    .core-services-grid {
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+    }
+    .core-service-item {
+        padding-bottom: 0.4rem;
     }
 }
